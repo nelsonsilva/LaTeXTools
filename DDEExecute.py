@@ -1,11 +1,11 @@
-import sublime, sublime_plugin
-from ctypes import *
+import sublime, sublime_plugin, platform
+if platform.system() == "Windows":
+	from ctypes import *
 
 # Send DDE Execute command to running program
 
 class send_ddeCommand(sublime_plugin.TextCommand):
 	def run(self, edit, service = "", topic = "", command = ""):
-		
 		print "Got request for DDE!"
 
 		# define win32 api functions

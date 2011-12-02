@@ -30,7 +30,9 @@ class View_pdfCommand(sublime_plugin.WindowCommand):
 			# Search in the GUI: under Settings|Options...
 			# Under "Set inverse search command-line", set:
 			# sublime_text "%f":%l
-			viewercmd = ["SumatraPDF", "-reuse-instance"]		
+			viewercmd = ["SumatraPDF", "-reuse-instance"]
+		elif s == "Linux":
+			viewercmd = ["evince"]
 		else:
 			sublime.error_message("Platform as yet unsupported. Sorry!")
 			return	

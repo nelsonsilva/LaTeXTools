@@ -32,7 +32,7 @@ class View_pdfCommand(sublime_plugin.WindowCommand):
 			# sublime_text "%f":%l
 			viewercmd = ["SumatraPDF", "-reuse-instance"]
 		elif s == "Linux":
-			viewercmd = ["evince"]
+			viewercmd = ["gnome-open"]
 		else:
 			sublime.error_message("Platform as yet unsupported. Sorry!")
 			return	
